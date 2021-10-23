@@ -1,0 +1,20 @@
+:local(.add) {
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+  align-items: center;
+}
+
+:local(.cols) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+:local(.add input) {
+  padding: 10px;
+}
+
+:local(.add button) {
+  padding: 10px;
+}

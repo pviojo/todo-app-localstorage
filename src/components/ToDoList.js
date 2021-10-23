@@ -1,12 +1,18 @@
 import React from "react";
 import ToDoItem from "./ToDoItem";
 
-const ToDoList = ({ todoList }) => {
+const ToDoList = ({ todos, onChangeItem }) => {
   return (
     <div>
       <ul>
-        {todoList.map((item) => {
-          return <ToDoItem key={item.id} todos={item} />;
+        {todos.map((item) => {
+          return (
+            <ToDoItem
+              key={item.id}
+              item={item}
+              onChange={(value) => onChangeItem(item.id, value)}
+            />
+          );
         })}
       </ul>
     </div>

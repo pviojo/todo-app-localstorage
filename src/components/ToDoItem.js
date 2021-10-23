@@ -1,13 +1,19 @@
 import React from "react";
-
-const ToDoItem = ({todos}) => {
+import styles from "./index.module.css";
+const ToDoItem = ({ item, onChange }) => {
   return (
-    <div>
-   {todos.name}
-   <input type="checkbox" value={todos.complete} />
-  </div>
-  )
+    <div className={styles.item}>
+      <input
+        type="checkbox"
+        checked={item.complete}
+        defaultValue={item.complete}
+        onChange={(e) => {
+          onChange(e.target.checked);
+        }}
+      />
+      {item.label}
+    </div>
+  );
 };
 
 export default ToDoItem;
- 

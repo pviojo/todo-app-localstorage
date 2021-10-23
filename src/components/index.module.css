@@ -1,0 +1,8 @@
+:local(.item) {
+  padding: 5px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  text-align: left;
+  align-items: center;
+}
